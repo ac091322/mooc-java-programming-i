@@ -7,7 +7,6 @@ public class Message {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Write a message:");
-        // Write your program here
-
+        System.out.println("This is my message.");
     }
 }
