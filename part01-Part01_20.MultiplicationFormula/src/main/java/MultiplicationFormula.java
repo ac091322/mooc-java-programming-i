@@ -7,6 +7,15 @@ public class MultiplicationFormula {
         Scanner scanner = new Scanner(System.in);
 
         // Write your program here
-
+        System.out.println("Give the first number:");
+        int firstNum = Integer.valueOf(scanner.nextLine());
+        
+        System.out.println("Give the second number:");
+        int secondNum = Integer.valueOf(scanner.nextLine());
+        
+        System.out.println(firstNum + " * " + secondNum + " = " + (firstNum * secondNum));
+        
+        // the value of an integer is capped at 2^31 - 1 (or 2,147,483,647)
+        // can use "(long)" in front of the number for longer numbers
     }
 }
