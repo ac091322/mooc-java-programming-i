@@ -7,6 +7,21 @@ public class DifferentTypesOfInput {
         Scanner scan = new Scanner(System.in);
 
         // Write your program here
-
+        System.out.println("Give a string:");
+        String givenStr = scan.nextLine();
+        
+        System.out.println("Give an integer:");
+        int givenInt = Integer.valueOf(scan.nextLine());
+        
+        System.out.println("Give a double:");
+        double givenDouble = Double.valueOf(scan.nextLine());
+        
+        System.out.println("Give a boolean:");
+        boolean givenBoolean = Boolean.valueOf(scan.nextLine());
+        
+        System.out.println("You gave the string " + givenStr);
+        System.out.println("You gave the integer " + givenInt);
+        System.out.println("You gave the double " + givenDouble);
+        System.out.println("You gave the boolean " + givenBoolean);
     }
 }
