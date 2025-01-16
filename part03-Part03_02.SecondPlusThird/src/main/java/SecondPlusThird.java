@@ -8,6 +8,7 @@ public class SecondPlusThird {
         Scanner scanner = new Scanner(System.in);
 
         ArrayList<Integer> numbers = new ArrayList<>();
+
         while (true) {
             int number = Integer.valueOf(scanner.nextLine());
             if (number == 0) {
@@ -17,6 +18,6 @@ public class SecondPlusThird {
             numbers.add(number);
         }
 
-        System.out.println(numbers.get(0));
+        System.out.println(numbers.get(1) + numbers.get(2));
     }
 }

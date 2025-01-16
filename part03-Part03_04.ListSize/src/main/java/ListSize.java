@@ -8,8 +8,10 @@ public class ListSize {
         Scanner scanner = new Scanner(System.in);
 
         ArrayList<String> list = new ArrayList<>();
+
         while (true) {
             String input = scanner.nextLine();
+
             if (input.equals("")) {
                 break;
             }
@@ -17,5 +19,6 @@ public class ListSize {
             list.add(input);
         }
 
+        System.out.println(list.size());
     }
 }
