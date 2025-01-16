@@ -16,15 +16,15 @@ public class AdvancedAstrology {
     }
 
     public static void printTriangle(int size) {
-        for (int i = 1; i <= size; i++) {
-            printSpaces(size - i);  // Print the leading spaces
-            printStars(i);           // Print the stars
+        for (int i = 1; i <= size; i += 1) {
+            printSpaces(size - i);    // Print the leading spaces
+            printStars(i);            // Print the stars
         }
     }
 
     public static void christmasTree(int height) {
         // Print the tree part (triangle)
-        for (int i = 1; i <= height; i++) {
+        for (int i = 1; i <= height; i += 1) {
             printSpaces(height - i);  // Print spaces for alignment
             printStars(2 * i - 1);    // Print stars (odd numbers of stars)
         }
