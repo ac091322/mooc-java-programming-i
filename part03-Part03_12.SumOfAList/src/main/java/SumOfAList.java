@@ -8,8 +8,10 @@ public class SumOfAList {
         Scanner scanner = new Scanner(System.in);
 
         ArrayList<Integer> list = new ArrayList<>();
+
         while (true) {
             int input = Integer.valueOf(scanner.nextLine());
+
             if (input == -1) {
                 break;
             }
@@ -19,6 +21,11 @@ public class SumOfAList {
 
         System.out.println("");
 
-        // toteuta listan lukujen summan laskeminen tänne
+        int sum = 0;
+        for (int num : list) {
+            sum += num;
+        }
+
+        System.out.println(sum);
     }
 }

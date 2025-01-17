@@ -5,6 +5,7 @@ public class Swap {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
         int[] array = new int[5];
         array[0] = 1;
         array[1] = 3;
@@ -15,19 +16,20 @@ public class Swap {
         int index = 0;
         while (index < array.length) {
             System.out.println(array[index]);
-            index++;
+            index += 1;
         }
+
         System.out.println("");
 
         // Implement here
         // asking for the two indices
         // and then swapping them
-
         System.out.println("");
+
         index = 0;
         while (index < array.length) {
             System.out.println(array[index]);
-            index++;
+            index += 1;
         }
     }
 

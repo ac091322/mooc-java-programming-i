@@ -8,17 +8,28 @@ public class GreatestInList {
         Scanner scanner = new Scanner(System.in);
 
         ArrayList<Integer> list = new ArrayList<>();
+
         while (true) {
             int input = Integer.valueOf(scanner.nextLine());
+
             if (input == -1) {
                 break;
             }
 
             list.add(input);
         }
-        
+
         System.out.println("");
 
         // implement finding the greatest number in the list here
+        int greatestNum = list.get(0);
+        for (int i = 1; i < list.size(); i += 1) {
+            int num = list.get(i);
+            if (num > greatestNum) {
+                greatestNum = num;
+            }
+        }
+
+        System.out.println(greatestNum);
     }
 }

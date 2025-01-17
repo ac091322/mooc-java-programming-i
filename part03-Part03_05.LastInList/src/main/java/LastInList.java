@@ -8,8 +8,10 @@ public class LastInList {
         Scanner scanner = new Scanner(System.in);
 
         ArrayList<String> list = new ArrayList<>();
+
         while (true) {
             String input = scanner.nextLine();
+
             if (input.equals("")) {
                 break;
             }
@@ -17,5 +19,6 @@ public class LastInList {
             list.add(input);
         }
 
+        System.out.println(list.get(list.size() - 1));
     }
 }

@@ -8,8 +8,10 @@ public class IndexOf {
         Scanner scanner = new Scanner(System.in);
 
         ArrayList<Integer> list = new ArrayList<>();
+
         while (true) {
             int input = Integer.valueOf(scanner.nextLine());
+
             if (input == -1) {
                 break;
             }
@@ -20,5 +22,15 @@ public class IndexOf {
         System.out.println("");
 
         // implement here finding the indices of a number
+        System.out.print("Search for? ");
+        int num = Integer.valueOf(scanner.nextLine());
+
+        for (int i = 0; i < list.size(); i += 1) {
+            int numInList = list.get(i);
+
+            if (numInList == num) {
+                System.out.println(numInList + " is at index " + i);
+            }
+        }
     }
 }

@@ -8,13 +8,24 @@ public class OnTheList {
         Scanner scanner = new Scanner(System.in);
 
         ArrayList<String> list = new ArrayList<>();
+
         while (true) {
             String input = scanner.nextLine();
+
             if (input.equals("")) {
                 break;
             }
 
             list.add(input);
+        }
+
+        System.out.println("Search for?");
+        String searchName = scanner.nextLine();
+
+        if (list.contains(searchName)) {
+            System.out.println(searchName + " was found!");
+        } else {
+            System.out.println(searchName + " was not found!");
         }
 
     }
