@@ -5,11 +5,13 @@ public class Main {
         // This is just an empty main method you can use to test
         // the Whistle class. Try for example:
 
-//        Whistle duckWhistle = new Whistle("Kvaak");
-//        Whistle roosterWhistle = new Whistle("Peef");
-//
-//        duckWhistle.sound();
-//        roosterWhistle.sound();
-//        duckWhistle.sound();
+        Whistle duckWhistle = new Whistle("Kvaak");
+        Whistle roosterWhistle = new Whistle("Peef");
+
+        duckWhistle.sound();
+        roosterWhistle.sound();
+        duckWhistle.sound();
+        roosterWhistle.sound();
+        roosterWhistle.sound();
     }
 }

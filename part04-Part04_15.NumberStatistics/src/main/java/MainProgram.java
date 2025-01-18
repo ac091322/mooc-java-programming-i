@@ -10,7 +10,35 @@ public class MainProgram {
 
         // In order for the tests to work, the objects must be created in the
         // correct order in the main program. First the object that tracks the total
-        // sum, secondly the object that tracks the sum of even numbers, 
+        // sum, secondly the object that tracks the sum of even numbers,
         // and lastly the one that tracks the sum of odd numbers!
+        Statistics totalStatistics = new Statistics();
+        Statistics evenStatistics = new Statistics();
+        Statistics oddStatistics = new Statistics();
+
+        System.out.println("Enter numbers: ");
+        while (true) {
+            int input = Integer.valueOf(scanner.nextLine());
+
+            if (input == -1) {
+                break;
+            }
+
+            if (input % 2 == 0) {
+                evenStatistics.addNumber(input);
+            } else {
+                oddStatistics.addNumber(input);
+            }
+
+            totalStatistics.addNumber(input);
+        }
+
+        System.out.println("Count: " + totalStatistics.getCount());
+        System.out.println("Sum: " + totalStatistics.sum());
+        System.out.println("Sum of even numbers: " + evenStatistics.sum());
+        System.out.println("Sum of odd numbers: " + oddStatistics.sum());
+        System.out.println("Average: " + totalStatistics.average());
+
+        // System.out.println(totalStatistics);
     }
 }
