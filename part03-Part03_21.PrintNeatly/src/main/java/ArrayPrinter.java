@@ -1,4 +1,5 @@
 
+//import java.util.Arrays;
 public class ArrayPrinter {
 
     public static void main(String[] args) {
@@ -9,5 +10,17 @@ public class ArrayPrinter {
 
     public static void printNeatly(int[] array) {
         // Write some code in here
+        // System.out.println(Arrays.toString(array));
+
+        int i = 0;
+        while (i < array.length) {
+            System.out.print(array[i]);
+
+            if (i < array.length - 1) {
+                System.out.print(", ");
+            }
+
+            i += 1;
+        }
     }
 }
