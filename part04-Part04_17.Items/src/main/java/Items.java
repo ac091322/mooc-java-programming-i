@@ -6,9 +6,22 @@ public class Items {
 
     public static void main(String[] args) {
         // implement here your program that uses the class Item
-
         ArrayList<Item> items = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
 
+        while (true) {
+            System.out.print("Name: ");
+            String name = scanner.nextLine();
+
+            if (name.isBlank()) {
+                break;
+            }
+
+            items.add(new Item(name));
+        }
+
+        for (Item name : items) {
+            System.out.println(name);
+        }
     }
 }

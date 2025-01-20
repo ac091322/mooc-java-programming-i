@@ -4,8 +4,8 @@ import java.time.format.DateTimeFormatter;
 
 public class Item {
 
-    private String name;
-    private LocalDateTime createdAt;
+    private final String name;
+    private final LocalDateTime createdAt;
 
     public Item(String name) {
         this.name = name;

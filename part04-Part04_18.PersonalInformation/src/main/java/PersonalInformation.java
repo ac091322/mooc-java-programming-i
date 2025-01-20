@@ -1,9 +1,9 @@
 
 public class PersonalInformation {
 
-    private String firstName;
-    private String lastName;
-    private String identificationNumber;
+    private final String firstName;
+    private final String lastName;
+    private final String identificationNumber;
 
     public PersonalInformation(String firstName, String lastName, String identificationNumber) {
         this.firstName = firstName;
