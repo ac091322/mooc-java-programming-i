@@ -4,7 +4,7 @@
 
 public class Person {
 
-    private String name;
+    private final String name;
     private int age;
     private int height;
     private int weight;
@@ -21,7 +21,7 @@ public class Person {
     }
 
     public void growOlder() {
-        this.age++;
+        this.age += 1;
     }
 
     public boolean isOfLegalAge() {
@@ -40,12 +40,12 @@ public class Person {
         return this.height;
     }
 
-    public int getWeight() {
-        return this.weight;
-    }
-
     public void setWeight(int weight) {
         this.weight = weight;
+    }
+
+    public int getWeight() {
+        return this.weight;
     }
 
     public double bmi() {

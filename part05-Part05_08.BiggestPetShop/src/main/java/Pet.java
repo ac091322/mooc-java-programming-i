@@ -1,8 +1,8 @@
 
 public class Pet {
 
-    private String name;
-    private String breed;
+    private final String name;
+    private final String breed;
 
     public Pet(String name, String breed) {
         this.name = name;
@@ -16,5 +16,4 @@ public class Pet {
     public String getBreed() {
         return breed;
     }
-
 }
