@@ -1,10 +1,11 @@
 // Don't modfy this class
+
 import java.util.Objects;
 
 public class Person {
 
-    private String name;
-    private int height;
+    private final String name;
+    private final int height;
 
     public Person(String name, int height) {
         this.name = name;
@@ -30,20 +31,30 @@ public class Person {
         if (this == obj) {
             return true;
         }
+
         if (obj == null) {
             return false;
         }
+
         if (getClass() != obj.getClass()) {
             return false;
         }
+
         final Person other = (Person) obj;
+
         if (this.height != other.height) {
             return false;
         }
+
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
+
         return true;
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, height);
+    }
 }
