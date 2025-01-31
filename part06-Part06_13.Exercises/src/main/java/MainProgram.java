@@ -2,6 +2,6 @@
 public class MainProgram {
 
     public static int partsCompleted() {
-        return 0;
+        return 2;
     }
 }
