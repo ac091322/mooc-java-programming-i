@@ -4,13 +4,20 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-
-        // Here you can try out the combined functionality of your classes
-        TodoList list = new TodoList();
         Scanner scanner = new Scanner(System.in);
+        TodoList todoList = new TodoList();
 
-        UserInterface ui = new UserInterface(list, scanner);
+        todoList.add("read the course material");
+        todoList.add("watch the latest fool us");
+        todoList.add("take it easy");
+
+        todoList.print();
+        todoList.remove(2);
+        System.out.println();
+        todoList.print();
+        System.out.println();
+
+        UserInterface ui = new UserInterface(todoList, scanner);
         ui.start();
-
     }
 }

@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 public class UserInterface {
 
-    private GradeRegister register;
-    private Scanner scanner;
+    private final GradeRegister register;
+    private final Scanner scanner;
 
     public UserInterface(GradeRegister register, Scanner scanner) {
         this.register = register;
@@ -21,6 +21,7 @@ public class UserInterface {
         while (true) {
             System.out.print("Points: ");
             String input = scanner.nextLine();
+
             if (input.equals("")) {
                 break;
             }
@@ -44,15 +45,17 @@ public class UserInterface {
             printsStars(stars);
             System.out.println("");
 
-            grade = grade - 1;
+            grade -= 1;
         }
-        
+
+        System.out.println("The average of points: " + register.averageOfPoints());
+        System.out.println("The average of grades: " + register.averageOfGrades());
     }
 
     public static void printsStars(int stars) {
         while (stars > 0) {
             System.out.print("*");
-            stars--;
+            stars -= 1;
         }
     }
 }
