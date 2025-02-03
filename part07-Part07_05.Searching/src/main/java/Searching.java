@@ -5,12 +5,13 @@ import java.util.Scanner;
 public class Searching {
 
     public static void main(String[] args) {
-        // The program below is meant for testing the search algorithms you'll write
         Scanner scanner = new Scanner(System.in);
+
         ArrayList<Book> books = new ArrayList<>();
         System.out.println("How many books to create?");
         int numberOfBooks = Integer.valueOf(scanner.nextLine());
-        for (int i = 0; i < numberOfBooks; i++) {
+        // generate a list of books to be created based on the number given
+        for (int i = 0; i < numberOfBooks; i += 1) {
             books.add(new Book(i, "name for the book " + i));
         }
 
@@ -18,10 +19,12 @@ public class Searching {
         int idToSearchFor = Integer.valueOf(scanner.nextLine());
 
         System.out.println("");
+
         System.out.println("Searching with linear search:");
         long start = System.currentTimeMillis();
         int linearSearchId = linearSearch(books, idToSearchFor);
         System.out.println("The search took " + (System.currentTimeMillis() - start) + " milliseconds.");
+
         if (linearSearchId < 0) {
             System.out.println("Book not found");
         } else {
@@ -30,20 +33,28 @@ public class Searching {
 
         System.out.println("");
 
-        System.out.println("");
         System.out.println("Seaching with binary search:");
         start = System.currentTimeMillis();
         int binarySearchId = binarySearch(books, idToSearchFor);
         System.out.println("The search took " + (System.currentTimeMillis() - start) + " milliseconds.");
+
         if (binarySearchId < 0) {
             System.out.println("Book not found");
         } else {
             System.out.println("Found it! " + books.get(binarySearchId));
         }
-
     }
 
     public static int linearSearch(ArrayList<Book> books, int searchedId) {
+        int i = 0;
+        while (i < books.size()) {
+            if (books.get(i).getId() == searchedId) {
+                return i;
+            }
+
+            i += 1;
+        }
+
         return -1;
     }
 
@@ -51,4 +62,3 @@ public class Searching {
         return -1;
     }
 }
-
