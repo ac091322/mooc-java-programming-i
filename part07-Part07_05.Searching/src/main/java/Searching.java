@@ -10,6 +10,7 @@ public class Searching {
         ArrayList<Book> books = new ArrayList<>();
         System.out.println("How many books to create?");
         int numberOfBooks = Integer.valueOf(scanner.nextLine());
+
         // generate a list of books to be created based on the number given
         for (int i = 0; i < numberOfBooks; i += 1) {
             books.add(new Book(i, "name for the book " + i));
@@ -58,7 +59,23 @@ public class Searching {
         return -1;
     }
 
-    public static int binarySearch(ArrayList<Book> books, long searchedId) {
+    public static int binarySearch(ArrayList<Book> books, int searchedId) {
+        int beginIndex = 0;
+        int endIndex = books.size() - 1;
+
+        while (beginIndex <= endIndex) {
+            int midIndex = (beginIndex + endIndex) / 2;
+            int bookId = books.get(midIndex).getId();
+
+            if (bookId == searchedId) {
+                return midIndex;
+            } else if (bookId < searchedId) {
+                beginIndex = midIndex + 1;
+            } else {
+                endIndex = midIndex - 1;
+            }
+        }
+
         return -1;
     }
 }

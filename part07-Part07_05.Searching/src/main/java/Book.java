@@ -1,8 +1,8 @@
 
 public class Book {
 
-    private int id;
-    private String name;
+    private final int id;
+    private final String name;
 
     public Book(int id, String name) {
         this.id = id;
@@ -21,5 +21,4 @@ public class Book {
     public String toString() {
         return "(id: " + id + "; name: " + name + ")";
     }
-
 }
